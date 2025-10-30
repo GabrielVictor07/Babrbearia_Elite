@@ -36,6 +36,8 @@ btn_agendar.addEventListener('click', async (e) => {
         const clienteId = clienteData.clienteId || clienteData.id || null
         console.log('clienteId usado para agendamento:', clienteId)
         
+        // Agora cadastra o agendamento
+
         const agendamentoResponse = await fetch(apiurlAgendamento, {
             method: 'POST',
             headers: {
