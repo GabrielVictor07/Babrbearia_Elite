@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Barbearia Elite</title>
+</head>
+<body>
+    <h1>Barbearia Elite</h1>
+    <section id="container">
+        <form action="" id="form form">
+            <h2>Seus Dados</h2>
+            <div class="col2">
+                <input type="text" placeholder="Nome Completo" id="nome_cliente" required>
+                <input type="number" placeholder="Telefone" id="telefone_cliente" required>
+            </div>
+
+            <div class="col2">
+                <input type="email" placeholder="E-mail" id="email_cliente" required>
+            </div>
+
+            <h2>Tipo de serviço</h2>
+
+            <div class="col3">
+                <input type="date" id="data_agendamento" required>
+                <input type="time" id="horario_agendamento" required>
+            </div>
+            
+            <div class="col4">
+                <select name="servico_desejado" id="servico_desejado" required>
+                    <option value="">Selecione o Serviço</option>
+                    <option value="Cabelo + Barba">Cabelo + Barba</option>
+                    <option value="Corte Simples">Corte Simples</option>
+                    <option value="Barba">Barba</option>
+                    <option value="Navalhado">Navalhado</option>
+                </select>
+            </div>
+
+            <button type="submit" id="btn_agendar">Agendar</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
