@@ -4,27 +4,9 @@ const app = express();
 app.use(express.json());
 const cors = require('cors');
 app.use(cors());
-const mysql2 = require('mysql2');
 const port = 3000;
 
-const mysql2 = require('mysql2');
-
-const db = mysql2.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '123456',
-    database: 'barbearia_elite_db'
-});
-
-db.getConnection((err, connection) => {
-    if (err) {
-        console.error('Erro ao conectar ao banco de dados:', err);
-        return;
-    }
-    console.log('Conexão bem-sucedida ao banco de dados!');
-    connection.release();
-}
-);
+const db = require('./db.js');
 
 app.post('/clientes', (req, res) => {
     const { nome, telefone, email } = req.body;

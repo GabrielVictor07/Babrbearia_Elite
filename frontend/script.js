@@ -50,7 +50,10 @@ btn_agendar.addEventListener('click', async (e) => {
         }
         const agendamentoData = await agendamentoResponse.json()
         console.log('Agendamento cadastrado:', agendamentoData)
-        alert('Agendamento realizado com sucesso!')
+        const msgCadastrado = document.getElementById('msgCadastrado')
+        msgCadastrado.textContent = `Agendamento realizado com sucesso para ${data} às ${horario}!`
+        msgCadastrado.classList.remove('hidden')
+        setTimeout(() => msgCadastrado.classList.add('hidden'), 5000)
         form.reset()
     } catch (error) {
         console.error('Erro:', error)
